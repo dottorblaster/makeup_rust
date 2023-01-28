@@ -7,7 +7,6 @@ defmodule Makeup.Lexers.RustLexer.Application do
   alias Makeup.Lexers.RustLexer
 
   def start(_type, _args) do
-    IO.inspect "ciaooo"
     Registry.register_lexer(RustLexer,
       options: [],
       names: ["rust"],

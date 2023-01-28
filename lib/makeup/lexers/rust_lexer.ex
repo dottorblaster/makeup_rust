@@ -3,7 +3,7 @@ defmodule Makeup.Lexers.RustLexer do
   import Makeup.Lexer.Combinators
   import Makeup.Lexer.Groups
 
-  alias Makeup.Lexers.RustLexer.Helper
+  import Makeup.Lexers.RustLexer.Helper
 
   @behaviour Makeup.Lexer
 
@@ -35,10 +35,10 @@ defmodule Makeup.Lexers.RustLexer do
   hex_digits = ascii_string([?0..?9, ?a..?f, ?A..?F], min: 1)
   oct_digits = ascii_string([?0..?7], min: 1)
   # Digits in an integer may be separated by underscores
-  number_bin = bin_digits |> Helper.with_optional_separator("_") |> token(:number_bin)
-  number_oct = oct_digits |> Helper.with_optional_separator("_") |> token(:number_oct)
-  number_hex = hex_digits |> Helper.with_optional_separator("_") |> token(:number_hex)
-  integer = Helper.with_optional_separator(digits, "_")
+  number_bin = bin_digits |> with_optional_separator("_") |> token(:number_bin)
+  number_oct = oct_digits |> with_optional_separator("_") |> token(:number_oct)
+  number_hex = hex_digits |> with_optional_separator("_") |> token(:number_hex)
+  integer = with_optional_separator(digits, "_")
 
   # Base 10
   number_integer = token(integer, :number_integer)
@@ -240,12 +240,12 @@ defmodule Makeup.Lexers.RustLexer do
   # match function names. They are followed by parens...
   defp postprocess_helper([
          {:name, attrs, text},
-         {:punctuation, %{language: :c}, "("}
+         {:punctuation, %{language: :rust}, "("}
          | tokens
        ]) do
     [
       {:name_function, attrs, text},
-      {:punctuation, %{language: :c}, "("}
+      {:punctuation, %{language: :rust}, "("}
       | postprocess_helper(tokens)
     ]
   end

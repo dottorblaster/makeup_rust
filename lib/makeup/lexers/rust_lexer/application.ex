@@ -1,6 +1,4 @@
-defmodule MakeupRust.Application do
-  # See https://hexdocs.pm/elixir/Application.html
-  # for more information on OTP Applications
+defmodule Makeup.Lexers.RustLexer.Application do
   @moduledoc false
 
   use Application
@@ -8,8 +6,8 @@ defmodule MakeupRust.Application do
   alias Makeup.Registry
   alias Makeup.Lexers.RustLexer
 
-  @impl true
   def start(_type, _args) do
+    IO.inspect "ciaooo"
     Registry.register_lexer(RustLexer,
       options: [],
       names: ["rust"],

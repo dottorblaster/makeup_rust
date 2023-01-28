@@ -5,7 +5,7 @@ defmodule MakeupRust.MixProject do
     [
       app: :makeup_rust,
       version: "0.1.0",
-      elixir: "~> 1.14",
+      elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -15,7 +15,7 @@ defmodule MakeupRust.MixProject do
   def application do
     [
       extra_applications: [],
-      mod: {MakeupRust.Application, []}
+      mod: {Makeup.Lexers.RustLexer.Application, []}
     ]
   end
 
@@ -23,6 +23,7 @@ defmodule MakeupRust.MixProject do
   defp deps do
     [
       {:makeup, "~> 1.0"},
+      {:nimble_parsec, "~> 1.2.3"},
       {:ex_doc, ">= 0.0.0", only: [:dev, :docs]}
     ]
   end

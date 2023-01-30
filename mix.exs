@@ -24,7 +24,8 @@ defmodule MakeupRust.MixProject do
     [
       {:makeup, "~> 1.0"},
       {:nimble_parsec, "~> 1.2.3"},
-      {:ex_doc, ">= 0.0.0", only: [:dev, :docs], runtime: false}
+      {:ex_doc, ">= 0.0.0", only: [:dev, :docs], runtime: false},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 end

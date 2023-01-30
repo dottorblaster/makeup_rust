@@ -23,7 +23,6 @@ defmodule Makeup.Lexers.RustLexer do
   #
   # Why this convention? Tokens can't be composed further, while raw strings can.
   # This way, we immediately know which of the combinators we can compose.
-  # TODO: check we're following this convention
 
   whitespace = ascii_string([?\r, ?\s, ?\n, ?\f], min: 1) |> token(:whitespace)
 

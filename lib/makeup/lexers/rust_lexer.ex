@@ -67,10 +67,10 @@ defmodule Makeup.Lexers.RustLexer do
   define = token(define_name, :name_constant)
 
   operator_name = word_from_list(~W(
-      -> + -  * / % ++ -- ~ ^ & && | ||
-      =  += -= *= /= &= |= %= ^= << >>
-      <<= >>= > < >= <= == != ! ? : 
-    ))
+    -> + -  * / % ++ -- ~ ^ & && | ||
+    =  += -= *= /= &= |= %= ^= << >>
+    <<= >>= > < >= <= == != ! ? :
+  ))
 
   operator = token(operator_name, :operator)
 

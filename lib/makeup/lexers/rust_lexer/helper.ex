@@ -1,4 +1,8 @@
 defmodule Makeup.Lexers.RustLexer.Helper do
+  @moduledoc """
+  Helper functions to easily deal with Rust tokens
+  """
+
   import NimbleParsec
 
   def with_optional_separator(combinator, separator) when is_binary(separator) do

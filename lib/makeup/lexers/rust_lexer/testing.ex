@@ -1,8 +1,8 @@
 defmodule Makeup.Lexers.RustLexer.Testing do
   @moduledoc false
   # The tests need to be checked manually!!! (remove this line when they've been checked)
-  alias Makeup.Lexers.RustLexer
   alias Makeup.Lexer.Postprocess
+  alias Makeup.Lexers.RustLexer
 
   def lex(text) do
     text

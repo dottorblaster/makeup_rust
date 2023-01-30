@@ -3,8 +3,8 @@ defmodule Makeup.Lexers.RustLexer.Application do
 
   use Application
 
-  alias Makeup.Registry
   alias Makeup.Lexers.RustLexer
+  alias Makeup.Registry
 
   def start(_type, _args) do
     Registry.register_lexer(RustLexer,

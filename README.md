@@ -1,6 +1,6 @@
 # MakeupRust
 
-**TODO: Add description**
+A [Makeup](https://github.com/elixir-makeup/makeup/) lexer for the Rust language.
 
 ## Installation
 

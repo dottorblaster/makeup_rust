@@ -28,8 +28,8 @@ defmodule MakeupRust.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:makeup, "~> 1.0"},
-      {:nimble_parsec, "~> 1.2.3"},
+      {:makeup, "~> 1.1"},
+      {:nimble_parsec, "~> 1.3.1"},
       {:ex_doc, ">= 0.0.0", only: [:dev, :docs], runtime: false},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]

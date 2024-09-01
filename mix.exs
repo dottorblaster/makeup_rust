@@ -5,7 +5,7 @@ defmodule MakeupRust.MixProject do
     [
       app: :makeup_rust,
       description: description(),
-      version: "0.2.0",
+      version: "0.3.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -41,7 +41,7 @@ defmodule MakeupRust.MixProject do
     [
       name: "makeup_rust",
       files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
-      licenses: ["BSD"],
+      licenses: ["BSD-2-Clause"],
       links: %{"GitHub" => "https://github.com/dottorblaster/makeup_rust"}
     ]
   end

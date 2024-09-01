@@ -10,7 +10,7 @@ by adding `makeup_rust` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:makeup_rust, "~> 0.1.0"}
+    {:makeup_rust, "~> 0.3.0"}
   ]
 end
 ```

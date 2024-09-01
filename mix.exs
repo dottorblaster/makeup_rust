@@ -29,9 +29,9 @@ defmodule MakeupRust.MixProject do
   defp deps do
     [
       {:makeup, "~> 1.1"},
-      {:nimble_parsec, "~> 1.3.1"},
+      {:nimble_parsec, "~> 1.4.0"},
       {:ex_doc, ">= 0.0.0", only: [:dev, :docs], runtime: false},
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 
